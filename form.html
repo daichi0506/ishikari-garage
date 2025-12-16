@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="札幌近郊の石狩にあるレンタルガレージです。奥行11mと7mの2パターンのタイプがあり、間口も2.9mあるのでキャンピングカーや物品倉庫・タイヤショベル・船舶・マリンジェット・バイク・収容可能なサイズ感！高さと幅は共通して3.5ｍあるので活用方法は様々。防犯カメラや照明も完備しており、水の使用も出来て洗車も可能です。"
+    />
+    <meta
+      name="keywords"
+      content="石狩,札幌近郊,レンタルガレージ,札幌近郊ガレージ"
+    />
+    <title>予約フォーム - 石狩ガレージ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap");
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-container w-container">
+        <div class="site">
+          <a href="/">
+            <img src="img/header-logo02.PNG" alt="石狩ガレージ" class="logo" />
+          </a>
+        </div>
+
+        <div class="btn-wrapper">
+          <img src="img/circle.PNG" alt="" class="spin_img" width="70px" />
+          <button
+            class="navbtn drawer__button"
+            onClick="document.querySelector('html').classList.toggle('open')"
+          >
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark"></i>
+            <span class="sr-only">MENU</span>
+          </button>
+        </div>
+
+        <nav class="nav drawer__nav">
+          <div>
+            <ul class="nav-inner drawer__nav__menu">
+              <li class="drawer__nav__item">
+                <a class="drawer__nav__link" href="/">Home</a>
+              </li>
+              <li class="drawer__nav__item">
+                <a class="drawer__nav__link" href="about.html">About Us</a>
+              </li>
+              <li class="drawer__nav__item">
+                <a class="drawer__nav__link" href="content.html">Service</a>
+              </li>
+              <li class="drawer__nav__item">
+                <a class="drawer__nav__link" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="form">
+      <div class="form-container w-container">
+        <h1 class="heading-decoration">予約フォーム</h1>
+        <p>
+          空き次第、予約順に こちらより連絡させて頂きますので
+          下記のフォームよりお申込み下さい。
+        </p>
+
+        <form action="mail.php" method="post">
+          <label for="name">お名前<span>*</span></label>
+          <input for="text" id="name" name="お名前" required></input>
+
+          <label for="tel">電話番号<span>*</span></label>
+          <input type="tel" id="tel" name="電話番号" required>
+
+          <label for="email">メールアドレス<span>*</span></label>
+          <input type="email" id="email" name="メールアドレス" required>
+
+          <label for="garage_type">ガレージタイプ<span>*</span></label>
+          <select id="garage_type" name="ガレージタイプ" required>
+           <option value="" disabled selected>選択してください</option>
+           <option value="ロング">ロング</option>
+           <option value="ショート">ショート</option>
+           <option value="どちらでも可">どちらでも可</option>
+          </select>
+
+          <label for="contact_method">ご連絡方法<span>*</span></label>
+          <select id="contact_method" name="ご連絡方法" required>
+            <option value="" disabled selected>選択してください</option>
+            <option value="メール">メール</option>
+            <option value="電話">電話</option>
+           </select>
+
+          <label for="note">備考欄</label>
+          <textarea name="備考欄" id="note" rows="3" placeholder="その他にご希望があればご記入ください。"></textarea>
+
+          <div class="pdf-section">
+            <p>ご案内資料はこちらからご覧いただけます</p>
+            <a href="img/material.pdf" target="_blank">
+                <img src="img/pdf-thumbnail.png" alt="PDF資料の画像" class="pdf-image">
+            </a>
+          </div>
+          <div class="button">
+            <button type="submit">送信する</button>
+          </div>
+          
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container w-container">
+        <!-- <div class="footer-site">
+          <a href="#">
+            <img src="img/header-logo00.png" alt="" width="135" height="25" />
+          </a>
+        </div> -->
+        <ul class="footer-sns">
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-twitter"></i>
+              <span class="sr-only">Twitter</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-facebook"></i>
+              <span class="sr-only">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-instagram"></i>
+              <span class="sr-only">Instagram</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="footer-add">
+          <li><a href="">札幌市豊平区美園8条1丁目2-11</a></li>
+          <li><a href="">石狩市親船町1-2（石狩ガレージⅠ）</a></li>
+          <li><a href="">石狩市親船町1-6（石狩ガレージⅡ）</a></li>
+        </ul>
+
+        <div class="footer-copy">&copy;HITOSHIco.</div>
+      </div>
+    </footer>
+    <style>
+      .subtitle {
+        color: #ff0000;
+        font-family: "Noto Serif JP" sans-serif;
+        font-size: clamp(0.875rem, 0.787rem + 0.3756vw, 1.125rem);
+        font-weight: 900;
+        line-height: 1.5;
+        background-color: #000;
+        padding: 0.5rem;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        margin-top: 5rem;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+      }
+
+      @media (min-width: 768px) {
+        .subtitle {
+          margin-top: 0;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .subtitle {
+          position: fixed;
+          left: 50%;
+          bottom: 10px;
+          transform: translate(-50%, 0);
+          z-index: 1000;
+        }
+
+        .hero h1 {
+          margin-top: 5rem;
+        }
+      }
+    </style>
+    <script>
+      var splide = new Splide(".splide", {
+        type: "loop",
+        autoplay: true,
+      });
+
+      splide.mount();
+    </script>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (event) {
+          event.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          const headerHeight = document.querySelector("header").offsetHeight;
+          window.scrollTo({
+            top: target.offsetTop - headerHeight,
+            left: 0,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
